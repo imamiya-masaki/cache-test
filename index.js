@@ -24,6 +24,11 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
+// ルートエンドポイントでHTMLファイルを提供
+app.get('/target', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'target.html'));
+});
+
 // サーバーを起動
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
